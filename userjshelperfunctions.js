@@ -1,0 +1,1 @@
+const waitFor=async(s)=>{return new Promise((r)=>{new MutationObserver((m,o)=>{m.forEach(()=>{if(document.querySelector(s)){r();o.disconnect}})}).observe(document.querySelector("html"),{childList:true,subtree:true})})}
